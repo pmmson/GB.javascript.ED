@@ -6,16 +6,12 @@ let lastDigitAmount = amount % 10;
 let nextDigitAfterLast = parseInt(amount / 10) % 10;
 let suffix;
 
-switch (true) {
-    case (lastDigitAmount == 1) && (nextDigitAfterLast != 1):
-        suffix = "рубль";
-        break;
-    case (lastDigitAmount >= 2 && lastDigitAmount <= 4) && (nextDigitAfterLast != 1):
-        suffix = "рубля";
-        break;
-    default:
-        suffix = "рублей";
-        break;
+if (lastDigitAmount == 1 && nextDigitAfterLast != 1) {
+    suffix = "рубль";
+} else if ((lastDigitAmount >= 2 && lastDigitAmount <= 4) && (nextDigitAfterLast != 1)) {
+    suffix = "рубля";
+} else {
+    suffix = "рублей";
 }
 
 alert(`Ваша сумма в ${amount} ${suffix} успешно зачислена.`);

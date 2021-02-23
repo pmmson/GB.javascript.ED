@@ -32,7 +32,9 @@ function diff(a, b) {
  * @param {number} b 
  */
 function div(a, b) {
-    if (b == 0) return "Деление на 0 недопустимо!";
+    if (b == 0) {
+        return "Деление на 0 недопустимо!";
+    }
     return a / b;
 }
 
