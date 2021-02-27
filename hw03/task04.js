@@ -34,6 +34,7 @@ function hasPhotos(product) {
     if ("photos" in product) {
         return product.photos.length != 0;
     }
+    return false;
 }
 
 let productsWithPhoto = products.filter(hasPhotos);
