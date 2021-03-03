@@ -8,7 +8,7 @@ function Post(author, text, date) {
 
 Post.prototype.edit = function (text) {
     this.text = text;
-}
+};
 
 function AttachedPost(author, text, date) {
     Post.call(this, author, text, date);
@@ -19,7 +19,7 @@ AttachedPost.prototype = Object.create(Post.prototype);
 AttachedPost.prototype.constructor = AttachedPost;
 AttachedPost.prototype.makeTextHighlighted = function () {
     this.highlighted = true;
-}
+};
 
 let myPost = new Post("Ivan", "Hello world!!", "01.02.2021");
 console.log(myPost.text);

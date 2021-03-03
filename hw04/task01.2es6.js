@@ -6,6 +6,7 @@ class Post {
         this.text = text;
         this.date = date;
     }
+    
     edit(text) {
         this.text = text;
     }
@@ -16,6 +17,7 @@ class AttachedPost extends Post {
         super(author, text, date);
         this.highlighted = false;
     }
+
     makeTextHighlighted() {
         this.highlighted = true;
     }
